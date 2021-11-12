@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://49.233.19.179:3306/mysqltest?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
