@@ -1,12 +1,32 @@
 server:
+#设置端口号
   port: 8080
   servlet:
     context-path: /
 
 spring:
+#链接数据库
   datasource:
     username: root
     password: 123456
     url: jdbc:mysql://49.233.19.179:3306/mysqltest?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
+    #关闭thymeleaf 缓存
+  thymeleaf:
+    cache: false
+
+
+# application.yml
+mybatis:
+#设置实体类路径
+    type-aliases-package: com.example.demo.pojo
+    #设置包路径
+    type-handlers-package: com.example.typehandler
+    configuration:
+        map-underscore-to-camel-case: true
+        default-fetch-size: 100
+        default-statement-timeout: 30
+        #设置mybatis，xml路径
+    mapper-locations: classpath:mybatis/mapper/*.xml
+
 

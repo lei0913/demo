@@ -1,7 +1,8 @@
 package com.example.demo.controller;
 
+import com.example.demo.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -12,12 +13,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class Indexcontroller {
-    @RequestMapping("/index")
-    public String test1(Model model) {
-        model.addAttribute("msg", "hello,springboot");
 
+    @Autowired
+    private UserMapper userMapper;
+
+
+    @RequestMapping({"index","/"})
+    public String index() {
         return "index";
     }
+/*
+    @RequestMapping("/addUser")
+    public String addUser() {
+        userMapper.addUser(new User(null, "李帮磊", 30));
+        return "ok";
+    }
+    @RequestMapping("/queryUserList")
+    public List<User> queryUserList(){
+        return userMapper.queryUserList();
+    }
+
+    @RequestMapping("/deleteUser")
+    public String deleteUser(Integer id){
+        userMapper.deleteUser(id);
+        return "ok";
+    }*/
 
 
 }
