@@ -19,11 +19,11 @@
 	<nav th:id="navbar">
 		<div th:class="container">
 			<div th:class="icon-img"></div>
-			<h1><a th:href="@{/hello(id=2)}" >纵横兄弟</a></h1>
+			<h1><a th:href="@{/}" >纵横兄弟</a></h1>
 			<ul>
 				<li><a th:class="current" th:href="@{/index}" >首页</a></li>
 				<li><a th:href="@{/about}" >关于我们</a></li>
-				<li><a th:href="@{/hello(id=2)}" >联系我们</a></li>
+				<li><a th:href="@{/contact}" >联系我们</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -45,7 +45,7 @@
 		<h2><span th:class="text-pirmary">纵横兄弟</span> 介绍</h2>
 		<p>Founded in 2013, Zongheng Brothers Volkswagen Quick Repair Shop has been operating for 8 years, mainly focusing on vehicle maintenance and upgrading
 		</p>
-		<a class="btn btn-light" th:href="@{/hello(id=2)}">阅读更多</a>
+		<a class="btn btn-light" th:href="@{/}">阅读更多</a>
 	</div>
 </section>
 <!--包裹标签 代表新的部分-->

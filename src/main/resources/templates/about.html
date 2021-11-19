@@ -2,74 +2,67 @@
 <html lang="zxx" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>纵横兄弟|首页</title>
-	<!-- Meta-Tags -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<meta name="description" content="欢迎来到自学在线">
-	<meta name="keywords" content="前端学习,自学在线">
+    <title>纵横兄弟|关于我们</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="欢迎来到自学在线">
+    <meta name="keywords" content="前端学习,自学在线">
 
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<!--引入文字图标-->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <!--引入文字图标-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
 <body>
 <header>
-	<nav th:id="navbar">
-		<div th:class="container">
-			<div th:class="icon-img"></div>
-			<h1><a th:href="@{/hello(id=2)}" >纵横兄弟</a></h1>
-			<ul>
-				<li><a th:class="current" th:href="@{/queryUserList}" >首页</a></li>
-				<li><a th:href="@{/about}" >关于我们</a></li>
-				<li><a th:href="@{/hello(id=2)}" >联系我们</a></li>
-			</ul>
-		</div>
-	</nav>
-	<div th:id="showcase">
-		<div th:class="container">
-			<div th:class="showcase-content">
-				<h1>欢迎来到<span th:class="text-pirmary"> 纵横兄弟</span></h1>
-				<p>Welcome to Latitude Brothers</p>
-				<a th:class="btn" th:href="@{/hello(id=2)}">关于我们</a>
-			</div>
-		</div>
-	</div>
-
+    <nav th:id="navbar">
+        <div th:class="container">
+            <div th:class="icon-img"></div>
+            <h1><a th:href="@{/}">纵横兄弟</a></h1>
+            <ul>
+                <li><a th:href="@{/}">首页</a></li>
+                <li><a th:class="current" th:href="@{/about}">关于我们</a></li>
+                <li><a th:href="@{/contact}">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
-<!--包裹标签 代表新的部分-->
-<section th:id="home-info" th:class="bg-dark">
-	<div th:class="info-img"></div>
-	<div th:class="info-content">
-		<h2><span th:class="text-pirmary">纵横兄弟</span> 介绍</h2>
-		<p>Founded in 2013, Zongheng Brothers Volkswagen Quick Repair Shop has been operating for 8 years, mainly focusing on vehicle maintenance and upgrading
-		</p>
-		<a class="btn btn-light" th:href="@{/hello(id=2)}">阅读更多</a>
-	</div>
+<section th:id="abount-info" class="py bg-light">
+	<div th:class="container">
+        <div th:class="info-left">
+            <h1 th:class="l-heading">关于<span th:class="text-pirmary">纵横兄弟</span></h1>
+            <p>Zhang SAN: five years of mechanical repair experience, proficient in various equipment installation, accident handling Zhang SAN: five years of mechanical repair experience, proficient in various equipment installation, accident handling</p>
+            <p>Zhang SAN: five years of mechanical repair experience, proficient in various equipment installation, accident handling</p>
+        </div>
+        <div th:class="info-right">
+            <img src="../images/pexels-photo-8145352.jpeg" alt="纵横兄弟">
+        </div>
+    </div>
 </section>
-<!--包裹标签 代表新的部分-->
-<section th:id="features">
-	<div class="box bg-light">
-		<i class="fa fa-users fa-3x" aria-hidden="true"></i>
-		<h3>技师介绍</h3>
-		<p>Zhang SAN: five years of mechanical repair experience, proficient in various equipment installation, accident handling</p>
-	</div>
-	<div class="box bg-primary">
-		<i class="fa fa-car fa-3x" aria-hidden="true"></i>
-		<h3>服务项目</h3>
-		<p>Zhang SAN: five years of mechanical repair experience, proficient in various equipment installation, accident handling</p>
-	</div>
-	<div class="box bg-light">
-		<i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
-		<h3>店面地址</h3>
-		<p>Zhang SAN: five years of mechanical repair experience, proficient in various equipment installation, accident handling</p>
-	</div>
+<section th:id="testimonials">
+    <div th:class="container">
+        <h2 th:class="l-heading">顾客评价</h2>
+        <div class="testimonial bg-primary">
+            <img src="../images/pexels-photo-10221407user1.jpeg" alt="Jan">
+            <p>非常好的公司</p>
+            <p>非常好的公司</p>
+            <p>非常好的公司</p>
+        </div>
+        <div class="testimonial bg-primary">
+            <img src="../images/pexels-photo-220453user2.jpeg" alt="Son">
+            <p>非常好的公司</p>
+            <p>非常好的公司</p>
+            <p>非常好的公司</p>
+        </div>
+    </div>
 </section>
+
+
 <!--版权声明-->
 <div th:class="clr"></div>
 <footer th:id="main-footer">
-	<p>纵横兄弟 &copy; 2021, All Rights Reserved</p>
+    <p>纵横兄弟 &copy; 2021, All Rights Reserved</p>
 </footer>
 
 

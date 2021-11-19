@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ContactMapper">
+    <insert id="addContact" parameterType="Contact">
+        INSERT INTO contact (id,name,email,message,phone) VALUES (#{id},#{name},#{email},#{message},#{phone})
+    </insert>
+
+    <select id="queryContactByName" resultType="Contact">
+        select * FROM contact WHERE name = #{name}
+    </select>
+
+    <select id="queryContactByPhone" resultType="Contact">
+        select * FROM contact WHERE phone = #{phone}
+    </select>
+
+    <select id="queryContactList" resultType="Contact">
+        select * FROM contact
+    </select>
+
+    <delete id="deleteUser" parameterType="int">
+        DELETE FROM contact WHERE id =#{id}
+    </delete>
+
+</mapper>
