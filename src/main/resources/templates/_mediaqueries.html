@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>纵横兄弟|首页</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="欢迎来到自学在线">
+    <meta name="keywords" content="前端学习,自学在线">
+    <!--media 条件-->
+    <link href="css/mobile.css" rel='stylesheet' type='text/css' media="screen and (max-width:768px)"/>
+    <!--引入文字图标-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+        body {
+            /*字体样式*/
+            font-family:Arial, helvetica,sans-serif;
+            background: gray;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1 {
+            /*隐藏*/
+            display: none;
+        }
+        /*smartphone 手机媒体查询:设置页面大小变化的时候对应的参数*/
+        @media (max-width: 500px){
+            body {
+                /*字体样式*/
+                background: red;
+
+            }
+            #smarphone h1 {
+                /*显示*/
+                display: block;
+            }
+
+        }
+        /*table 平板pid媒体查询:设置页面大小变化的时候对应的参数*/
+        @media (min-width: 501px) and  (max-width: 768px){
+            body {
+                /*字体样式*/
+                background: blue;
+
+            }
+            #table h1 {
+                /*显示*/
+                display: block;
+            }
+
+        }
+        /*normal 正常媒体查询:设置页面大小变化的时候对应的参数*/
+        @media (min-width: 769px) and  (max-width: 1200px){
+            body {
+                /*字体样式*/
+                background: green;
+
+            }
+            #noraml h1 {
+                /*显示*/
+                display: block;
+            }
+
+        }
+        /*widescreen 宽屏幕 媒体查询:设置页面大小变化的时候对应的参数*/
+        @media screen and(min-width: 1201px){
+            body {
+                /*字体样式*/
+                background: black;
+
+            }
+            #widescreen h1 {
+                /*显示*/
+                display: block;
+            }
+
+        }
+        /*landscape 横屏 媒体查询:设置页面大小变化的时候对应的参数*/
+        @media screen and(max-height: 500px){
+            body {
+                /*字体样式*/
+                background: orange;
+
+            }
+            #landscape h1 {
+                /*显示*/
+                display: block;
+            }
+
+        }
+    </style>
+    <!--media 条件-->
+    <link href="css/mobile.css" rel='stylesheet' type='text/css' media="screen and (max-width:768px)"/>
+</head>
+
+<body>
+    <div th:id="widescreen"><h1>Widescreen</h1></div>
+    <div th:id="noraml"><h1>noraml</h1></div>
+    <div th:id="table"><h1>table</h1></div>
+    <div th:id="smarphone"><h1>samrphone</h1></div>
+    <div th:id="landscape"><h1>landscape</h1></div>
+
+</body>
+</html>

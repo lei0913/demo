@@ -36,6 +36,24 @@ public class Indexcontroller {
         return "about";
     }
 
+    @RequestMapping("/_mediaqueries")
+    public String _mediaqueries(Model model) {
+        //根据id查询信息
+        //User user = userMapper.queryUserById(id);
+        //System.out.println(user);
+        //model.addAttribute("username", user.getUsername());
+        return "_mediaqueries";
+    }
+
+    @RequestMapping("/_em_rem")
+    public String _em_rem(Model model) {
+        //根据id查询信息
+        //User user = userMapper.queryUserById(id);
+        //System.out.println(user);
+        //model.addAttribute("username", user.getUsername());
+        return "_em_rem";
+    }
+
 
     /*
         @RequestMapping("/addUser")

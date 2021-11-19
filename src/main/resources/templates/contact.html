@@ -2,84 +2,89 @@
 <html lang="zxx" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>纵横兄弟|联系我们</title>
-	<!-- Meta-Tags -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<meta name="description" content="欢迎来到自学在线">
-	<meta name="keywords" content="前端学习,自学在线">
+    <title>纵横兄弟|联系我们</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="欢迎来到自学在线">
+    <meta name="keywords" content="前端学习,自学在线">
 
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<!--引入文字图标-->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <!--引入文字图标-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--media 条件-->
+    <link href="css/mobile.css" rel='stylesheet' type='text/css' media="screen and (max-width:500px)"/>
 </head>
 
 <body>
 <header>
-	<nav th:id="navbar">
-		<div th:class="container">
-			<div th:class="icon-img"></div>
-			<h1><a th:href="@{/}" >纵横兄弟</a></h1>
-			<ul>
-				<li><a th:href="@{/}" >首页</a></li>
-				<li><a th:href="@{/about}" >关于我们</a></li>
-				<li><a th:class="current" th:href="@{/contact}" >联系我们</a></li>
-			</ul>
-		</div>
-	</nav>
+    <nav th:id="navbar">
+        <div th:class="container">
+            <div th:class="icon-img"></div>
+            <h1><a th:href="@{/}">纵横兄弟</a></h1>
+            <ul>
+                <li><a th:href="@{/}">首页</a></li>
+                <li><a th:href="@{/about}">关于我们</a></li>
+                <li><a th:class="current" th:href="@{/contact}">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
 
 
 </header>
 
 <section th:id="contact-from" class="py">
-	<div th:class="container">
-		<h1 th:class="l-heading">联系<span th:class="text-pirmary">我们</span></h1>
-		<p>如有疑问请先填写以下下信息联系我们</p>
-		<form action="contact">
-			<div th:class="form-group">
-				<label th:for="name">姓名</label>
-				<input type="text" name="name" th:id="name">
-			</div>
+    <div th:class="container">
+        <h1 th:class="l-heading">联系<span th:class="text-pirmary">我们</span></h1>
+        <p>如有疑问请先填写以下下信息联系我们</p>
+        <form action="contact">
+            <div th:class="form-group">
+                <label th:for="name">姓名</label>
+                <input type="text" name="name" th:id="name">
+            </div>
 
-			<div th:class="form-group">
-				<label th:for="phone">手机号</label>
-				<input type="text" name="phone" th:id="name">
-			</div>
+            <div th:class="form-group">
+                <label th:for="phone">手机号</label>
+                <input type="text" name="phone" th:id="name">
+            </div>
 
-			<div th:class="form-group">
-				<label th:for="email">邮箱</label>
-				<input type="text" name="email" th:id="name">
-			</div>
+            <div th:class="form-group">
+                <label th:for="email">邮箱</label>
+                <input type="text" name="email" th:id="name">
+            </div>
 
-			<div th:class="form-group">
-				<label th:for="message">反馈意见</label>
-				<textarea type="text" name="message" th:id="name"></textarea>
-			</div>
-			<button type="submit" th:href="@{/}" class="btn">提交</button>
-		</form>
-	</div>
+            <div th:class="form-group">
+                <label th:for="message">反馈意见</label>
+                <textarea type="text" name="message" th:id="name"></textarea>
+            </div>
+            <button type="submit" th:href="@{/}" class="btn">提交</button>
+        </form>
+    </div>
 </section>
-<section th:id="features">
-	<div class="box bg-light">
-		<i class="fa fa-home fa-3x" aria-hidden="true"></i>
-		<h3>公司地址</h3>
-		<p>大庆市让胡路111号</p>
-	</div>
-	<div class="box bg-light">
-		<i class="fa fa-phone fa-3x" aria-hidden="true"></i>
-		<h3>电话</h3>
-		<p>18560873454</p>
-	</div>
-	<div class="box bg-light">
-		<i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
-		<h3>邮箱</h3>
-		<p>695444694@qq.com</p>
-	</div>
+<section th:id="contact-info" class="bg-dark">
+    <div class="container">
+        <div class="box">
+        <i class="fa fa-home fa-3x" aria-hidden="true"></i>
+        <h3>公司地址</h3>
+        <p>大庆市让胡路111号</p>
+        </div>
+        <div class="box">
+            <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+            <h3>电话</h3>
+            <p>18560873454</p>
+        </div>
+        <div class="box">
+            <i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
+            <h3>邮箱</h3>
+            <p>695444694@qq.com</p>
+        </div>
+    </div>
+
 </section>
 <!--版权声明-->
 <div th:class="clr"></div>
 <footer th:id="main-footer">
-	<p>纵横兄弟 &copy; 2021, All Rights Reserved</p>
+    <p>纵横兄弟 &copy; 2021, All Rights Reserved</p>
 </footer>
 
 
