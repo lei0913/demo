@@ -11,6 +11,10 @@
         select * FROM user
     </select>
 
+    <select id="queryUserById" resultType="User">
+        select * FROM user WHERE id=#{id}
+    </select>
+
     <delete id="deleteUser" parameterType="int">
         DELETE FROM user WHERE id =#{id}
     </delete>

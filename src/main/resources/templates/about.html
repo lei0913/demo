@@ -21,7 +21,7 @@
 			<div th:class="icon-img"></div>
 			<h1><a th:href="@{/hello(id=2)}" >纵横兄弟</a></h1>
 			<ul>
-				<li><a th:class="current" th:href="@{/index}" >首页</a></li>
+				<li><a th:class="current" th:href="@{/queryUserList}" >首页</a></li>
 				<li><a th:href="@{/about}" >关于我们</a></li>
 				<li><a th:href="@{/hello(id=2)}" >联系我们</a></li>
 			</ul>
@@ -32,7 +32,7 @@
 			<div th:class="showcase-content">
 				<h1>欢迎来到<span th:class="text-pirmary"> 纵横兄弟</span></h1>
 				<p>Welcome to Latitude Brothers</p>
-				<a th:class="btn" th:href="@{/about}">关于我们</a>
+				<a th:class="btn" th:href="@{/hello(id=2)}">关于我们</a>
 			</div>
 		</div>
 	</div>
